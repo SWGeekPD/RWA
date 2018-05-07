@@ -1,12 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RWAComponent } from './RWA/rwa.component';
 import { UserItemComponent } from './user-item/user-item.component';
 import { UserListComponent } from './user-list/user-list.component';
-
+import { AgGridModule } from 'ag-grid-angular/main';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,9 @@ import { UserListComponent } from './user-list/user-list.component';
     UserListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AgGridModule.withComponents(RWAComponent),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

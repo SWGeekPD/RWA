@@ -1,3 +1,12 @@
-<p>
-  RWA Data
-</p>
+<div>
+  <div style="text-align: center">
+    <header>
+      <span>RWA Data</span>
+    </header>
+  </div>
+  <div style="display:flex;vertical-align: middle;align-content: center;">
+    <ag-grid-angular class="ag-theme-material" style="width: 100%; height: 540px; position: absolute" #RegReportGrid [columnDefs]="columnDefs" [rowData]="rowData"
+      (gridReady)="onGridReady($event)">
+    </ag-grid-angular>
+  </div>
+</div>
